@@ -14,6 +14,7 @@
 		D5BDCB4223077FB90098EAAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BDCB4023077FB90098EAAF /* LaunchScreen.storyboard */; };
 		D5BDCB4D23077FBA0098EAAF /* AnnaCPhotographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BDCB4C23077FBA0098EAAF /* AnnaCPhotographyTests.swift */; };
 		D5BDCB5823077FBA0098EAAF /* AnnaCPhotographyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BDCB5723077FBA0098EAAF /* AnnaCPhotographyUITests.swift */; };
+		D5BDCB662307BA450098EAAF /* icons8-menu-24.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BDCB652307BA450098EAAF /* icons8-menu-24.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D5BDCB5323077FBA0098EAAF /* AnnaCPhotographyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnaCPhotographyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BDCB5723077FBA0098EAAF /* AnnaCPhotographyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnaCPhotographyUITests.swift; sourceTree = "<group>"; };
 		D5BDCB5923077FBA0098EAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5BDCB652307BA450098EAAF /* icons8-menu-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-menu-24.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				D5BDCB4B23077FBA0098EAAF /* AnnaCPhotographyTests */,
 				D5BDCB5623077FBA0098EAAF /* AnnaCPhotographyUITests */,
 				D5BDCB3523077FB70098EAAF /* Products */,
+				D5BDCB652307BA450098EAAF /* icons8-menu-24.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +234,7 @@
 			files = (
 				D5BDCB4223077FB90098EAAF /* LaunchScreen.storyboard in Resources */,
 				D5BDCB3F23077FB90098EAAF /* Assets.xcassets in Resources */,
+				D5BDCB662307BA450098EAAF /* icons8-menu-24.png in Resources */,
 				D5BDCB3D23077FB70098EAAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
