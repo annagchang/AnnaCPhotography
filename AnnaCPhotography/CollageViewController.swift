@@ -10,11 +10,14 @@ import UIKit
 
 class CollageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var header: String = ""
     let images:[String] = ["1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4"]
     @IBOutlet weak var collageCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = header
         
         let itemSize = UIScreen.main.bounds.width/3 - 3
         

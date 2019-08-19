@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var leadingC: NSLayoutConstraint!
     @IBOutlet var trailingC: NSLayoutConstraint!
     @IBOutlet var homeScreen: UIView!
+    @IBOutlet weak var menuTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = categories[indexPath.row]
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(displayP3Red: 240/255, green: 231/255, blue: 103/255, alpha: 1.0)
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toCollage", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var selectedRowIndex = self.menuTableView.indexPathForSelectedRow
+        
+        if (segue.identifier == "toCollage") {
+            var destVC : CollageViewController = segue.destination as! CollageViewController
+            destVC.header = categories[selectedRowIndex!.row]
+        }
     }
 }
 
