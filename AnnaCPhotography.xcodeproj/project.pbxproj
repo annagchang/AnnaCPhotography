@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50B91CB230A061A002E2C7F /* CollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50B91CA230A061A002E2C7F /* CollageViewController.swift */; };
+		D50B91CD230A26CC002E2C7F /* myImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50B91CC230A26CC002E2C7F /* myImageCell.swift */; };
+		D50B91D8230A37E2002E2C7F /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50B91D4230A37E2002E2C7F /* 3.jpg */; };
+		D50B91D9230A37E2002E2C7F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50B91D5230A37E2002E2C7F /* 1.jpg */; };
+		D50B91DD230AFEEF002E2C7F /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50B91DC230AFEEE002E2C7F /* 4.jpg */; };
+		D50B91DF230AFF56002E2C7F /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50B91DE230AFF56002E2C7F /* 2.jpg */; };
 		D5BDCB3823077FB70098EAAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BDCB3723077FB70098EAAF /* AppDelegate.swift */; };
 		D5BDCB3A23077FB70098EAAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BDCB3923077FB70098EAAF /* ViewController.swift */; };
 		D5BDCB3D23077FB70098EAAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BDCB3B23077FB70098EAAF /* Main.storyboard */; };
@@ -35,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D50B91CA230A061A002E2C7F /* CollageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageViewController.swift; sourceTree = "<group>"; };
+		D50B91CC230A26CC002E2C7F /* myImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myImageCell.swift; sourceTree = "<group>"; };
+		D50B91D4230A37E2002E2C7F /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		D50B91D5230A37E2002E2C7F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D50B91DC230AFEEE002E2C7F /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		D50B91DE230AFF56002E2C7F /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		D5BDCB3423077FB70098EAAF /* AnnaCPhotography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnaCPhotography.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BDCB3723077FB70098EAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BDCB3923077FB70098EAAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +88,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D50B91D0230A37E2002E2C7F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D50B91D1230A37E2002E2C7F /* Portraits */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D50B91D1230A37E2002E2C7F /* Portraits */ = {
+			isa = PBXGroup;
+			children = (
+				D50B91DC230AFEEE002E2C7F /* 4.jpg */,
+				D50B91DE230AFF56002E2C7F /* 2.jpg */,
+				D50B91D4230A37E2002E2C7F /* 3.jpg */,
+				D50B91D5230A37E2002E2C7F /* 1.jpg */,
+			);
+			path = Portraits;
+			sourceTree = "<group>";
+		};
 		D5BDCB2B23077FB70098EAAF = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +133,13 @@
 			children = (
 				D5BDCB3723077FB70098EAAF /* AppDelegate.swift */,
 				D5BDCB3923077FB70098EAAF /* ViewController.swift */,
+				D50B91CC230A26CC002E2C7F /* myImageCell.swift */,
+				D50B91CA230A061A002E2C7F /* CollageViewController.swift */,
 				D5BDCB3B23077FB70098EAAF /* Main.storyboard */,
 				D5BDCB3E23077FB90098EAAF /* Assets.xcassets */,
 				D5BDCB4023077FB90098EAAF /* LaunchScreen.storyboard */,
 				D5BDCB4323077FB90098EAAF /* Info.plist */,
+				D50B91D0230A37E2002E2C7F /* Images */,
 			);
 			path = AnnaCPhotography;
 			sourceTree = "<group>";
@@ -232,9 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50B91DD230AFEEF002E2C7F /* 4.jpg in Resources */,
 				D5BDCB4223077FB90098EAAF /* LaunchScreen.storyboard in Resources */,
 				D5BDCB3F23077FB90098EAAF /* Assets.xcassets in Resources */,
 				D5BDCB662307BA450098EAAF /* icons8-menu-24.png in Resources */,
+				D50B91D9230A37E2002E2C7F /* 1.jpg in Resources */,
+				D50B91D8230A37E2002E2C7F /* 3.jpg in Resources */,
+				D50B91DF230AFF56002E2C7F /* 2.jpg in Resources */,
 				D5BDCB3D23077FB70098EAAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50B91CB230A061A002E2C7F /* CollageViewController.swift in Sources */,
+				D50B91CD230A26CC002E2C7F /* myImageCell.swift in Sources */,
 				D5BDCB3A23077FB70098EAAF /* ViewController.swift in Sources */,
 				D5BDCB3823077FB70098EAAF /* AppDelegate.swift in Sources */,
 			);
@@ -437,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ65D7B7X9;
 				INFOPLIST_FILE = AnnaCPhotography/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ65D7B7X9;
 				INFOPLIST_FILE = AnnaCPhotography/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

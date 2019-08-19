@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var menuShowing = false
+    let categories = ["Portraits", "Earth", "Streets", "B&W", "Film", "Sundry"]
 
     @IBOutlet var leadingC: NSLayoutConstraint!
     @IBOutlet var trailingC: NSLayoutConstraint!
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //tableView.tableFooterView = UIView()
     }
     
     @IBAction func menuTapped(_ sender: Any) {
@@ -36,6 +39,17 @@ class ViewController: UIViewController {
             self.view.layoutIfNeeded()
         })
         menuShowing = !menuShowing
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+        cell.textLabel?.text = categories[indexPath.row]
+        
+        return cell
     }
 }
 
