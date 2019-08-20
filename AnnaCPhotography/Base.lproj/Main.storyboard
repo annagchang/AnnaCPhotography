@@ -210,18 +210,60 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71T-WD-OJl">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                             </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-ia-yCe">
+                                <rect key="frame" x="0.0" y="698" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKz-Cg-iGc">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="30"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQb-z2-EXj">
+                                        <rect key="frame" x="8" y="53" width="359" height="23"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiN-ZU-LW1">
+                                        <rect key="frame" x="8" y="30" width="359" height="23"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.046691205979999997" green="0.059960560820000001" blue="0.48193607230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1gm-Q2-4a9"/>
+                                    <constraint firstItem="DKz-Cg-iGc" firstAttribute="top" secondItem="WUg-ia-yCe" secondAttribute="top" id="3ok-bB-Lb1"/>
+                                    <constraint firstItem="LQb-z2-EXj" firstAttribute="leading" secondItem="WUg-ia-yCe" secondAttribute="leading" constant="8" id="EmO-Pb-Ggd"/>
+                                    <constraint firstAttribute="trailing" secondItem="EiN-ZU-LW1" secondAttribute="trailing" constant="8" id="MxW-9G-LIY"/>
+                                    <constraint firstAttribute="trailing" secondItem="DKz-Cg-iGc" secondAttribute="trailing" constant="8" id="arD-33-529"/>
+                                    <constraint firstAttribute="trailing" secondItem="LQb-z2-EXj" secondAttribute="trailing" constant="8" id="irK-YJ-2pe"/>
+                                    <constraint firstItem="EiN-ZU-LW1" firstAttribute="leading" secondItem="WUg-ia-yCe" secondAttribute="leading" constant="8" id="loh-QQ-Ce2"/>
+                                    <constraint firstItem="LQb-z2-EXj" firstAttribute="top" secondItem="EiN-ZU-LW1" secondAttribute="bottom" id="pnn-vC-a9y"/>
+                                    <constraint firstItem="DKz-Cg-iGc" firstAttribute="leading" secondItem="WUg-ia-yCe" secondAttribute="leading" constant="8" id="riJ-w7-hpy"/>
+                                    <constraint firstItem="EiN-ZU-LW1" firstAttribute="top" secondItem="DKz-Cg-iGc" secondAttribute="bottom" id="zaa-vR-0CE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="71T-WD-OJl" firstAttribute="leading" secondItem="4DK-mD-Jk8" secondAttribute="leading" id="3Ne-Zy-k23"/>
+                            <constraint firstItem="WUg-ia-yCe" firstAttribute="bottom" secondItem="4DK-mD-Jk8" secondAttribute="bottom" id="46E-hj-Cil"/>
+                            <constraint firstItem="WUg-ia-yCe" firstAttribute="leading" secondItem="4DK-mD-Jk8" secondAttribute="leading" id="A7Z-VK-P72"/>
                             <constraint firstItem="71T-WD-OJl" firstAttribute="bottom" secondItem="4DK-mD-Jk8" secondAttribute="bottom" id="TYE-3n-bNh"/>
                             <constraint firstItem="71T-WD-OJl" firstAttribute="trailing" secondItem="4DK-mD-Jk8" secondAttribute="trailing" id="ocm-jE-nta"/>
                             <constraint firstItem="71T-WD-OJl" firstAttribute="top" secondItem="4DK-mD-Jk8" secondAttribute="top" id="rhI-ew-tfd"/>
+                            <constraint firstItem="WUg-ia-yCe" firstAttribute="trailing" secondItem="4DK-mD-Jk8" secondAttribute="trailing" id="u1m-ao-FOt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4DK-mD-Jk8"/>
                     </view>
                     <connections>
+                        <outlet property="equipment" destination="LQb-z2-EXj" id="Hwk-LS-eGN"/>
+                        <outlet property="imageTitle" destination="DKz-Cg-iGc" id="y62-BW-zbg"/>
                         <outlet property="imageView" destination="71T-WD-OJl" id="g0a-zn-V5U"/>
+                        <outlet property="location" destination="EiN-ZU-LW1" id="edI-y2-8Th"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uW9-7c-jc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
