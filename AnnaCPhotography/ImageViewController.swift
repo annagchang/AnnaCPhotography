@@ -13,6 +13,7 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(imageName!)
         imageView.image = UIImage(named: imageName!)
     }
 }

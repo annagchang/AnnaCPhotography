@@ -47,17 +47,9 @@ class CollageViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        zoomImage = "\(indexPath.row).jpg"
-        performSegue(withIdentifier: "toImageView", sender: indexPath.row)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var selectedCellIndex = self.collageCollectionView.indexPathsForSelectedItems
-        
-        if (segue.identifier == "toImageView") {
-            let destVC : ImageViewController = segue.destination as! ImageViewController
-            destVC.imageName = zoomImage
-        }
+        let destVC = storyboard?.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
+        destVC.imageName = "\(indexPath.row).jpg"
+        self.navigationController?.pushViewController(destVC, animated: true)
     }
 }
 

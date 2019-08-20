@@ -168,7 +168,6 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="MXN-qQ-Te3" id="VLN-RH-ovb"/>
-                                            <segue destination="t4G-41-syn" kind="show" identifier="toImageView" id="pPP-l2-7Zt"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -193,6 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="collageCollectionView" destination="QqB-9E-Keb" id="R0A-9M-F6s"/>
+                        <segue destination="t4G-41-syn" kind="show" id="g6W-Zc-ZBj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14l-3h-Bjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,12 +202,12 @@
         <!--Image View Controller-->
         <scene sceneID="ARp-IW-DNF">
             <objects>
-                <viewController id="t4G-41-syn" customClass="ImageViewController" customModule="AnnaCPhotography" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageViewController" id="t4G-41-syn" customClass="ImageViewController" customModule="AnnaCPhotography" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mn4-uz-jlX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71T-WD-OJl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71T-WD-OJl">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                             </imageView>
                         </subviews>
