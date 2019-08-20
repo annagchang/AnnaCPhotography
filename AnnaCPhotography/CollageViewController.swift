@@ -11,7 +11,8 @@ import UIKit
 class CollageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var header: String = ""
-    let images:[String] = ["1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4"]
+    var numOfImages = 4
+    var zoomImage = ""
     @IBOutlet weak var collageCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -36,13 +37,27 @@ class CollageViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return numOfImages
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myImageCell
-        cell.imageView.image = UIImage(named: images[indexPath.row] + ".jpg")
+        cell.imageView.image = UIImage(named: "\(indexPath.row).jpg")
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        zoomImage = "\(indexPath.row).jpg"
+        performSegue(withIdentifier: "toImageView", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var selectedCellIndex = self.collageCollectionView.indexPathsForSelectedItems
+        
+        if (segue.identifier == "toImageView") {
+            let destVC : ImageViewController = segue.destination as! ImageViewController
+            destVC.imageName = zoomImage
+        }
     }
 }
 

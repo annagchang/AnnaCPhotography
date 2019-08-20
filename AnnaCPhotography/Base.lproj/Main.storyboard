@@ -168,6 +168,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="MXN-qQ-Te3" id="VLN-RH-ovb"/>
+                                            <segue destination="t4G-41-syn" kind="show" identifier="toImageView" id="pPP-l2-7Zt"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -197,6 +198,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14l-3h-Bjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1972" y="-142.61083743842366"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="ARp-IW-DNF">
+            <objects>
+                <viewController id="t4G-41-syn" customClass="ImageViewController" customModule="AnnaCPhotography" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mn4-uz-jlX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71T-WD-OJl">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="71T-WD-OJl" firstAttribute="leading" secondItem="4DK-mD-Jk8" secondAttribute="leading" id="3Ne-Zy-k23"/>
+                            <constraint firstItem="71T-WD-OJl" firstAttribute="bottom" secondItem="4DK-mD-Jk8" secondAttribute="bottom" id="TYE-3n-bNh"/>
+                            <constraint firstItem="71T-WD-OJl" firstAttribute="trailing" secondItem="4DK-mD-Jk8" secondAttribute="trailing" id="ocm-jE-nta"/>
+                            <constraint firstItem="71T-WD-OJl" firstAttribute="top" secondItem="4DK-mD-Jk8" secondAttribute="top" id="rhI-ew-tfd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4DK-mD-Jk8"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="71T-WD-OJl" id="g0a-zn-V5U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uW9-7c-jc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2976.8000000000002" y="-142.61083743842366"/>
         </scene>
     </scenes>
     <resources>
