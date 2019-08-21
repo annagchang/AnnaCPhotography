@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var menuShowing = false
-    let categories = ["Portraits", "Earth", "Streets", "B&W", "Film", "Sundry"]
+    let categories = ["Earth", "People", "Concrete", "B&W", "Film", "and Sundry"]
 
     @IBOutlet var leadingC: NSLayoutConstraint!
     @IBOutlet var trailingC: NSLayoutConstraint!
@@ -21,7 +21,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView.tableFooterView = UIView()
+        self.menuTableView.tableFooterView = UIView(frame: .zero)
+        var frame = self.menuTableView.frame
+        frame.size.height = self.menuTableView.contentSize.height;
+        self.menuTableView.frame = frame;
     }
     
     @IBAction func menuTapped(_ sender: Any) {
@@ -49,9 +52,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = categories[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.font = UIFont.init(name: "Euphemia UCAS", size: 18)
+        cell.backgroundColor = UIColor(displayP3Red: 0/255, green: 119/255, blue: 179/255, alpha: 1.0)
         
+        //color of selected cell
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor(displayP3Red: 240/255, green: 231/255, blue: 103/255, alpha: 1.0)
+        backgroundView.backgroundColor = UIColor(displayP3Red: 73/255, green: 195/255, blue: 239/255, alpha: 1.0)
         cell.selectedBackgroundView = backgroundView
         
         return cell

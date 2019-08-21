@@ -42,13 +42,13 @@ class CollageViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myImageCell
-        cell.imageView.image = UIImage(named: "\(indexPath.row).jpg")
+        cell.imageView.image = UIImage(named: "P\(indexPath.row).jpg")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let destVC = storyboard?.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
-        destVC.imageName = "\(indexPath.row).jpg"
+        destVC.imageName = "P\(indexPath.row).jpg"
         self.navigationController?.pushViewController(destVC, animated: true)
     }
 }
