@@ -11,7 +11,8 @@ import UIKit
 class CollageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var header: String = ""
-    var numOfImages = 4
+    var prefix = ""
+    var numOfImages = 0
     var zoomImage = ""
     @IBOutlet weak var collageCollectionView: UICollectionView!
     
@@ -42,13 +43,21 @@ class CollageViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myImageCell
-        cell.imageView.image = UIImage(named: "P\(indexPath.row).jpg")
+        cell.imageView.image = UIImage(named: "\(prefix)\(indexPath.row).JPG")
+        if (cell.imageView.image == nil) {
+            cell.imageView.image = UIImage(named: "\(prefix)\(indexPath.row).jpg")
+        }
+        if (cell.imageView.image!.size.height > cell.imageView.image!.size.height) {
+            cell.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let destVC = storyboard?.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
-        destVC.imageName = "P\(indexPath.row).jpg"
+        destVC.prefix = "\(prefix)"
+        destVC.imageIndex = indexPath.row
+        
         self.navigationController?.pushViewController(destVC, animated: true)
     }
 }

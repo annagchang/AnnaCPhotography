@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var menuShowing = false
-    let categories = ["Earth", "People", "Concrete", "B&W", "Film", "and Sundry"]
+    let categories = ["People", "Earth", "Concrete & Sts", "B&W", "Film", "and Sundry"]
 
+    @IBOutlet weak var menuHeight: NSLayoutConstraint!
     @IBOutlet var leadingC: NSLayoutConstraint!
     @IBOutlet var trailingC: NSLayoutConstraint!
     @IBOutlet var homeScreen: UIView!
@@ -20,11 +21,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.menuTableView.tableFooterView = UIView(frame: .zero)
-        var frame = self.menuTableView.frame
-        frame.size.height = self.menuTableView.contentSize.height;
-        self.menuTableView.frame = frame;
     }
     
     @IBAction func menuTapped(_ sender: Any) {
@@ -74,7 +70,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (segue.identifier == "toCollage") {
             var destVC : CollageViewController = segue.destination as! CollageViewController
             destVC.header = categories[selectedRowIndex!.row]
+            if (selectedRowIndex!.row == 0) {
+                destVC.numOfImages = 24
+                destVC.prefix = "P"
+            } else if (selectedRowIndex!.row == 1) {
+                destVC.numOfImages = 10
+                destVC.prefix = "E"
+            } else if (selectedRowIndex!.row == 2) {
+                destVC.numOfImages = 10
+                destVC.prefix = "CS"
+            } else if (selectedRowIndex!.row == 3) {
+                destVC.numOfImages = 10
+                destVC.prefix = "BW"
+            } else if (selectedRowIndex!.row == 4) {
+                destVC.numOfImages = 10
+                destVC.prefix = "F"
+            } else if (selectedRowIndex!.row == 5) {
+                destVC.numOfImages = 10
+                destVC.prefix = "S"
+            } else {
+                destVC.numOfImages = 0
+                destVC.prefix = ""
+            }
         }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.updateViewConstraints()
+        self.menuHeight?.constant = self.menuTableView.contentSize.height
     }
 }
 

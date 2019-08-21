@@ -13,7 +13,10 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var equipment: UILabel!
     
+    var prefix = ""
+    var imageIndex : Int?
     var imageName : String?
+    var image : UIImage?
     var titleText : String?
     var locationText : String?
     var equimentText : String?
@@ -21,7 +24,13 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: imageName!)
+        
+        image = UIImage(named: "\(prefix)\(imageIndex!).JPG")
+        if (image == nil) {
+            image = UIImage(named: "\(prefix)\(imageIndex!).jpg")
+        }
+        imageView.image = image
+        imageName = "\(prefix)\(imageIndex!)"
         
         let path = Bundle.main.path(forResource: "ImageInfo", ofType:"plist")
         let dict = NSDictionary(contentsOfFile:path!)

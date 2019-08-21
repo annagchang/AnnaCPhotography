@@ -2,16 +2,148 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>P1.jpg</key>
+	<key>P0</key>
+	<array>
+		<string>Local</string>
+		<string>Gurun Pasir | Bintan Island | Indonesia</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P1</key>
+	<array>
+		<string>Local</string>
+		<string>Gurun Pasir | Bintan Island | Indonesia</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P2</key>
+	<array>
+		<string>Local</string>
+		<string>Gurun Pasir | Bintan Island | Indonesia</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P3</key>
+	<array>
+		<string>Young Hearts</string>
+		<string>Gurun Pasir | Bintan Island | Indonesia</string>
+		<string>10-18mm, Rebel t5i</string>
+	</array>
+	<key>P4</key>
+	<array>
+		<string>Street Vendor</string>
+		<string>Chiang Mai | Thailand</string>
+		<string>10-18mm, Rebel t5i</string>
+	</array>
+	<key>P5</key>
+	<array>
+		<string>Street Vendor</string>
+		<string>Bangkok | Thailand</string>
+		<string>10-18mm, Rebel t5i</string>
+	</array>
+	<key>P6</key>
 	<array>
 		<string>Serena Tramm</string>
 		<string>Palos Verdes | CA</string>
 		<string>18-55mm, Rebel t5i</string>
 	</array>
-	<key>P2.jpg</key>
+	<key>P7</key>
 	<array>
-		<string></string>
-		<string>Gurung Serang | Bintan Island | Indonesia</string>
+		<string>Serena Tramm</string>
+		<string>Manhattan Beach | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P8</key>
+	<array>
+		<string>Serena Tramm</string>
+		<string>Manhattan Beach | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P9</key>
+	<array>
+		<string>Beth Lu</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P10</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P11</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P12</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P13</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P14</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P15</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P16</key>
+	<array>
+		<string>Sana Chaudhury</string>
+		<string>Berkeley | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P17</key>
+	<array>
+		<string>Serena Tramm</string>
+		<string>Palos Verdes | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P18</key>
+	<array>
+		<string>Serena Tramm</string>
+		<string>Palos Verdes | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P19</key>
+	<array>
+		<string>Serena Tramm</string>
+		<string>Palos Verdes | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P20</key>
+	<array>
+		<string>Serena Tramm</string>
+		<string>Palos Verdes | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P21</key>
+	<array>
+		<string>Serena Tramm</string>
+		<string>Palos Verdes | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P22</key>
+	<array>
+		<string>Stella Kim</string>
+		<string>Anaheim | CA</string>
+		<string>50mm, Rebel t5i</string>
+	</array>
+	<key>P23</key>
+	<array>
+		<string>Stella Kim</string>
+		<string>Anaheim | CA</string>
 		<string>50mm, Rebel t5i</string>
 	</array>
 </dict>
