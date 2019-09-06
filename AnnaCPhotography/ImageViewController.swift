@@ -29,6 +29,7 @@ class ImageViewController: UIViewController {
         if (image == nil) {
             image = UIImage(named: "\(prefix)\(imageIndex!).jpg")
         }
+        image = image!.correctlyOrientedImage()
         imageView.image = image
         imageName = "\(prefix)\(imageIndex!)"
         
@@ -46,3 +47,4 @@ class ImageViewController: UIViewController {
         }
     }
 }
+

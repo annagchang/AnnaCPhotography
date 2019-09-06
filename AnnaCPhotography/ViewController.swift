@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var menuShowing = false
-    let categories = ["People", "Earth", "Concrete & Sts", "B&W", "Film", "and Sundry"]
+    let categories = ["People", "Earth", "Concrete", "B&W", "Film", "and Sundry"]
 
     @IBOutlet weak var menuHeight: NSLayoutConstraint!
     @IBOutlet var leadingC: NSLayoutConstraint!
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             var destVC : CollageViewController = segue.destination as! CollageViewController
             destVC.header = categories[selectedRowIndex!.row]
             if (selectedRowIndex!.row == 0) {
-                destVC.numOfImages = 24
+                destVC.numOfImages = 25
                 destVC.prefix = "P"
             } else if (selectedRowIndex!.row == 1) {
                 destVC.numOfImages = 10

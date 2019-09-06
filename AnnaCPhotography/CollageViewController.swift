@@ -47,9 +47,6 @@ class CollageViewController: UIViewController, UICollectionViewDataSource, UICol
         if (cell.imageView.image == nil) {
             cell.imageView.image = UIImage(named: "\(prefix)\(indexPath.row).jpg")
         }
-        if (cell.imageView.image!.size.height > cell.imageView.image!.size.height) {
-            cell.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
-        }
         return cell
     }
     
@@ -62,3 +59,17 @@ class CollageViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 }
 
+extension UIImage {
+    func correctlyOrientedImage() -> UIImage {
+        if self.imageOrientation == .up {
+            return self
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return normalizedImage ?? self;
+    }
+}
